@@ -8,8 +8,17 @@ export default class Engine {
   }
 
   resetTwoCards = () => {
-    this.card1 = cards[0];
-    this.card2 = cards[1];
+    let isSame = false
+    
+    let index1 = Math.floor(Math.random() * Math.floor(4));
+    let index2 = Math.floor(Math.random() * Math.floor(4));
+    if(index1 === index2){
+      return this.resetTwoCards()
+    }
+    console.log(index1,index2)
+    this.card1 = cards[index1];
+    this.card2 = cards[index2];
+
   }
 
   getState = () => {
