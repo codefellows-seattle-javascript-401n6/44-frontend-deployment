@@ -7,7 +7,7 @@ const express = require('express');
 const app = express();
 
 app.get('/', (req, res) => {
-    res.send({data: ['some data', 42]})
+    res.send({data: ['hello', 42]})
 })
 
 // app.use('/api/spot-it', require('./routes/spot-it'));
