@@ -1,5 +1,6 @@
 import card1Image from './01.png';
 import card2Image from './55.png';
+// import Deck from './deck';
 
 export default class SpotItEngine {
   constructor() {
@@ -8,7 +9,7 @@ export default class SpotItEngine {
   }
 
   resetTwoCards = () => {
-      this.card1 = ["igloo", "dragon", "art", "lightning", "knight", "man", "dog", "padlock"],
+      this.card1 = ["igloo", "dragon", "art", "lightning", "knight", "man", "dog", "padlock"], //this.deck(draw)
       this.card2 = ["padlock", "lips", "anchor", "music-note", "flower", "exclamation-point", "car", "key"]
       this.card1.sort(() => Math.random() < .5 ? -1 : 1);
       this.card2.sort(() => Math.random() < .5 ? -1 : 1);
