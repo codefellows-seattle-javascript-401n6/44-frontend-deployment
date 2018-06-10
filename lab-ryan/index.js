@@ -6,11 +6,11 @@ mongoose.connect(process.env.MONGODB_URI);
 const express = require('express');
 const app = express();
 
-app.get('/', (req, res) => {
-    res.send({data: ['hello', 42]})
-})
+// app.get('/', (req, res) => {
+//     res.send({data: ['hello', 42]})
+// })
 
-// app.use('/api/spot-it', require('./routes/spot-it'));
+// app.use('/api/spotIt', require('./routes/spotItRoute.js'));
 
 const Bundler = require('parcel-bundler');
 let bundler = new Bundler('./public/index.html');

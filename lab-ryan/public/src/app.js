@@ -5,7 +5,7 @@ import {
     Link
 } from 'react-router-dom';
 import ReactDOM from 'react-dom';
-// import SpotItPage from '/components/spot-it/SpotItPage';
+import SpotItPage from './components/spot-it/SpotItPage.js';
 
 class HomePage extends Component {
     render() {
@@ -14,8 +14,7 @@ class HomePage extends Component {
                 <p>My Homepage</p>
                 <p>Select a Link below:</p>
                 <p><Link to="/spot-it">Spot-It</Link></p>
-        </Fragment>
-        
+        </Fragment>  
     }
 }
 

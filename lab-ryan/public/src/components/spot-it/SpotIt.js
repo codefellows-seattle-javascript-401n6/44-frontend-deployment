@@ -34,16 +34,18 @@ export default class SpotIt extends Component {
         Guesses Left: {this.state.guessesLeft}
       </div>
       <div>
-        <img onClick={this.handleImgClick} src={this.state.card1Image} />
-        <img onClick={this.handleImgClick} src={this.state.card2Image} />
+        <img onClick={this.handleImgClick} 
+            src={this.state.card1Image} />
+        <img onClick={this.handleImgClick} 
+            src={this.state.card2Image} />
       </div>
       <div>
-        {this.state.card1.map((symbol,i) => {
+        Card 1: {this.state.card1.map((symbol, i) => {
           return <button key={i} onClick={() => this.handleClick(symbol)}>{symbol}</button>
         })}
       </div>
       <div>
-        {this.state.card2.map((symbol, i) => {
+        Card 2: {this.state.card2.map((symbol, i) => {
           return <button key={i} onClick={() => this.handleClick(symbol)}>{symbol}</button>
         })}
       </div>
