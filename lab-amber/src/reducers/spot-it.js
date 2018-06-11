@@ -23,7 +23,6 @@ export default function wordCardReducer(state, action) {
 
   switch(action.type) {
     case LISTS_LOAD:
-      console.log('attempt to reload list');
       let newList1 = [];
       let newList2 = [];
 
@@ -51,18 +50,13 @@ export default function wordCardReducer(state, action) {
       let commonWord = initialState.allWords[commonIndex];
 
       while (usedWords.indexOf(commonWord) > -1) {
-        console.log('finding final word');
         commonIndex = Math.floor(Math.random() * initialState.allWords.length);
         commonWord = initialState.allWords[commonIndex];
       }
-      console.log('final common word', commonWord);
 
       newList1.push(commonWord);
       newList2.push(commonWord);
       usedWords.push(commonWord);
-
-      console.log('initial first list', newList1);
-      console.log('initial second list', newList2);
 
       newList1.sort(() => 0.5 - Math.random());
       newList2.sort(() => 0.5 - Math.random());
@@ -71,14 +65,9 @@ export default function wordCardReducer(state, action) {
       newList1.push(newList1.shift());
       newList2.push(newList2.shift());
 
-      console.log('sorted first list', newList1);
-      console.log('sorted second list', newList2);
-
       newState.list1 = newList1;
       newState.list2 = newList2;
       newState.commonWord = commonWord;
-
-      console.log('lists to load', newState);
 
       return Object.assign({}, state, newState);
     case LISTS_POINT:

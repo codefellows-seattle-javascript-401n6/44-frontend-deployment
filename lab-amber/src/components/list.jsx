@@ -11,9 +11,7 @@ class List extends React.Component {
   }
 
   displayNewSet() {
-    console.log('list this.props', this.props.info);
     return this.props.info.map((listItem, i) => {
-      console.log('list. listItem', i, listItem);
       return <ListItem key={i} info={listItem} />
     });
   }
