@@ -23,6 +23,7 @@ export default function wordCardReducer(state, action) {
 
   switch(action.type) {
     case LISTS_LOAD:
+      console.log('attempt to reload list');
       let newList1 = [];
       let newList2 = [];
 

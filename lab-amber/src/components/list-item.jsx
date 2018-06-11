@@ -3,6 +3,7 @@ import {connect} from 'react-redux';
 
 import {
   listsPoint,
+  listsLoad,
 } from '../actions/spot-it.js';
 
 class ListItem extends React.Component {
@@ -19,6 +20,7 @@ class ListItem extends React.Component {
 
     if (targetVal === commonWord) {
       this.props.listsPoint();
+      this.props.listsLoad();      
     }
   }
 
@@ -39,7 +41,8 @@ const mapStateToProps = state => {
 
 const mapDispatchToProps = (dispatch, getState) => {
   return {
-    listsPoint: () => dispatch(listsPoint())
+    listsPoint: () => dispatch(listsPoint()),
+    listsLoad: () => dispatch(listsLoad())
   }
 }
 
