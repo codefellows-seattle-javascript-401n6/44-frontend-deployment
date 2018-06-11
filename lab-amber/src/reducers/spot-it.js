@@ -6,7 +6,7 @@ import {
 
 let initialState = {
   score: 0,
-  allWords: ['flower', 'garden', 'ball', 'key', 'frog', 'apple', 'ice', 'grass', 'crown', 'eyeball', 'dress', 'shoes', 'ice cream', 'skateboard', 'car', 'lipstick', 'hairbrush', 'princess', 'castle', 'tire', 'hammer', 'door', 'window', 'skates', 'sandals', 'flip flops', 'tree', 'rose', 'milkshake', 'dog', 'cat', 'milk', 'cow', 'farm', 'fence', 'road', 'snowman', 'snowflake', 'cloud', 'sun', 'juice', 'glass', 'apron', 'knife', 'fork', ],
+  allWords: ['flower', 'garden', 'ball', 'key', 'frog', 'apple', 'ice', 'grass', 'crown', 'eyeball', 'dress', 'shoes', 'icecream', 'skateboard', 'car', 'lipstick', 'hairbrush', 'princess', 'castle', 'tire', 'hammer', 'door', 'window', 'skates', 'sandals', 'flipflops', 'tree', 'rose', 'milkshake', 'dog', 'cat', 'milk', 'cow', 'farm', 'fence', 'road', 'snowman', 'snowflake', 'cloud', 'sun', 'juice', 'glass', 'apron', 'knife', 'fork', 'belly', 'coat', 'rain', 'sigh', 'punch', 'kick', 'love', 'revenge', 'gym', 'teacher', 'high', 'food'],
   list1: [],
   list2: [],
   commonWord: ''
@@ -66,6 +66,10 @@ export default function wordCardReducer(state, action) {
 
       newList1.sort(() => 0.5 - Math.random());
       newList2.sort(() => 0.5 - Math.random());
+
+      newList1.reverse();
+      newList1.push(newList1.shift());
+      newList2.push(newList2.shift());
 
       console.log('sorted first list', newList1);
       console.log('sorted second list', newList2);

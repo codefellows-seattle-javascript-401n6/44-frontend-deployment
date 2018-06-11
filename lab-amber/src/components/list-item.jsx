@@ -16,6 +16,9 @@ class ListItem extends React.Component {
   checkMatch(event) {
     event.preventDefault();
     let targetVal = event.target.innerText;
+
+    console.log('registered click', targetVal);
+
     let commonWord = this.props.lists.commonWord;
 
     if (targetVal === commonWord) {
