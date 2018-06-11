@@ -1,6 +1,7 @@
 
-import card1Image from './01.png';
-import card2Image from './55.png';
+import card1Image from './assets/01.png';
+import card2Image from './assets/55.png';
+
 
 export default class SpotItEngine {
   constructor() {
